@@ -5,7 +5,7 @@
         padding: "1em"
     });
     $("<h1>",{text:"色の距離の計算"}).appendTo(h);
-    $("<div>",{text:"aaaa"}).appendTo(h);
+    $("<div>",{text:"色を選択してください。"}).appendTo(h);
     function addInputColor(title){
         var hh = $("<div>",{text:title}).appendTo(h);
         var show = $("<div>").appendTo(h);
@@ -13,6 +13,7 @@
             show.text($(this).val());
             main();
         });
+        h.append("<br>");
         return function(){ return i.val() };
     }
     h.append("<br>");
@@ -35,7 +36,10 @@
             "L*a*b*表色系でのユークリッド距離による色差の計算",
             "CIEDE2000による色差の計算"
         ].map(function(v,i){
-            $("<div>",{text:h}).append("<br>").append(orgRound(diffColor(a,b,3-i),0.001)).appendTo(result);
+            $("<div>",{text:v}).append("<br>").append(orgRound(diffColor(
+                yaju1919.getRGB(a),
+                yaju1919.getRGB(b),
+                3-i),0.001)).appendTo(result);
         })
     }
 })();
