@@ -20,7 +20,7 @@
         b = addInputColor("色B");
     h.append("<br>");
     h.append("<br>");
-    var result = $("<div>");
+    var result = $("<div>").appendTo(h);
     function orgRound(value, base) { // 四捨五入
         return Math.round(value * base) / base;
     }
