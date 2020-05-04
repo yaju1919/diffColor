@@ -27,8 +27,7 @@
     function main(){
         result.empty();
         var aa = a(),
-            bb = b(),
-            str = "";
+            bb = b();
         [
             "RGB表色系でのユークリッド距離による色差の計算",
             "XYZ表色系でのユークリッド距離による色差の計算",
@@ -38,7 +37,7 @@
             $("<div>",{text:v}).append("<br>").append(orgRound(diffColor(
                 yaju1919.getRGB(aa),
                 yaju1919.getRGB(bb),
-                3-i),0.001)).appendTo(result);
+                3-i),1000)).appendTo(result);
         })
     }
 })();
