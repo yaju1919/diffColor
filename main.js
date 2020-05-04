@@ -37,8 +37,8 @@
             "CIEDE2000による色差の計算"
         ].map(function(v,i){
             $("<div>",{text:v}).append("<br>").append(orgRound(diffColor(
-                yaju1919.getRGB(a),
-                yaju1919.getRGB(b),
+                yaju1919.getRGB(aa),
+                yaju1919.getRGB(bb),
                 3-i),0.001)).appendTo(result);
         })
     }
