@@ -9,7 +9,7 @@
     function addInputColor(title){
         var hh = $("<div>",{text:title}).appendTo(h);
         var show = $("<div>").appendTo(h);
-        var i = $("<input>",{type:"color"}).change(function(){
+        var i = $("<input>",{type:"color"}).appendTo(h).change(function(){
             show.text($(this).val());
             main();
         });
