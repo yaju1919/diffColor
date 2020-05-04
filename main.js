@@ -13,13 +13,12 @@
             show.text($(this).val());
             main();
         });
-        h.append("<br>");
+        h.append("<br><br><br>");
         return function(){ return i.val() };
     }
     h.append("<br>");
     var a = addInputColor("色A"),
         b = addInputColor("色B");
-    h.append("<br>");
     h.append("<br>");
     var result = $("<div>").appendTo(h);
     function orgRound(value, base) { // 四捨五入
